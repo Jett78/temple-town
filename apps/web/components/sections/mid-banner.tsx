@@ -15,7 +15,7 @@ export async function MidBanner() {
     const banner = midBanners[0];
     return (
       <section className="w-full">
-        <div className="relative h-[300px] w-full sm:h-[400px]">
+        <div className="relative h-screen md:h-[140vh] w-full ">
           <Image
             src={banner.imageUrl}
             alt={banner.title}
