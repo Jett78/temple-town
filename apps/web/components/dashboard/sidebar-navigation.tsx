@@ -357,14 +357,14 @@ export function Sidebar() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-slate-900 text-slate-300 relative group/sidebar">
-      <div className="p-6 overflow-hidden">
+    <div className="flex flex-col h-full bg-zinc-50  text-slate-800 relative group/sidebar">
+      <div className="p-4.5 overflow-hidden border-b border-zinc-300">
         <Link
           href="/dashboard"
-          className="flex items-center gap-2 font-bold text-xl text-white whitespace-nowrap"
+          className="flex items-center gap-2  px-2 font-bold text-lg text-zinc-800 whitespace-nowrap"
         >
-          <span className="opacity-100 text-center transition-opacity duration-300">
-            Dashboard
+          <span className="  ">
+           Admin Dashboard
           </span>
         </Link>
       </div>
@@ -387,7 +387,7 @@ export function Sidebar() {
                     "flex w-full items-center gap-3 p-3 text-xs font-medium rounded-lg transition-colors",
                     isChildActive
                       ? "bg-primarymain text-white"
-                      : "hover:bg-slate-800 hover:text-white",
+                      : "hover:bg-primarymain hover:text-white",
                   )}
                 >
                   <item.icon
@@ -395,10 +395,10 @@ export function Sidebar() {
                       "size-5 shrink-0",
                       isChildActive
                         ? "text-white"
-                        : "text-slate-400 group-hover:text-white",
+                        : "text-slate-600 group-hover:text-white",
                     )}
                   />
-                  <span className="truncate opacity-100 transition-opacity duration-300">
+                  <span className="truncate opacity-100 transition-opacity duration-100">
                     {item.name}
                   </span>
                   <span className="ml-auto">
@@ -423,7 +423,7 @@ export function Sidebar() {
                             "flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-colors",
                             isChildItemActive
                               ? "bg-primarymain/20 text-white"
-                              : "text-slate-400 hover:bg-slate-800 hover:text-white",
+                              : "text-slate-600 hover:bg-primarymain hover:text-white",
                           )}
                         >
                           <child.icon className="size-4 shrink-0" />
@@ -445,7 +445,7 @@ export function Sidebar() {
                 "flex items-center justify-between p-3 text-xs font-medium rounded-lg transition-colors group",
                 isActive
                   ? "bg-primarymain text-white"
-                  : "hover:bg-slate-800 hover:text-white",
+                  : "hover:bg-primarymain hover:text-white",
               )}
             >
               <div className="flex items-center gap-3 overflow-hidden">
@@ -454,10 +454,10 @@ export function Sidebar() {
                     "size-5 shrink-0",
                     isActive
                       ? "text-white"
-                      : "text-slate-400 group-hover:text-white",
+                      : "text-slate-600 group-hover:text-white",
                   )}
                 />
-                <span className="truncate opacity-100 transition-opacity duration-300">
+                <span className="truncate opacity-100 transition-opacity duration-100">
                   {item.name}
                 </span>
               </div>
@@ -467,13 +467,13 @@ export function Sidebar() {
         })}
       </nav>
 
-      <div className="p-4 border-t border-slate-800 space-y-2">
+      <div className="p-4 border-t border-zinc-200 space-y-2">
         <Link
           href="/"
-          className="flex items-center gap-3 px-3 py-2 w-full text-xs font-medium rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition-colors overflow-hidden"
+          className="flex items-center gap-3 px-3 py-2 w-full text-xs font-medium rounded-lg text-slate-600 hover:bg-primarymain hover:text-white transition-colors overflow-hidden"
         >
           <ExternalLink className="size-5 shrink-0" />
-          <span className="truncate opacity-100  transition-opacity duration-300">
+          <span className="truncate opacity-100  transition-opacity duration-100">
             View Site
           </span>
         </Link>
@@ -484,7 +484,7 @@ export function Sidebar() {
             }
           >
             <LogOut className="size-5 shrink-0" />
-            <span className="truncate opacity-100 transition-opacity duration-300">
+            <span className="truncate opacity-100 transition-opacity duration-100">
               Logout
             </span>
           </AlertDialogTrigger>

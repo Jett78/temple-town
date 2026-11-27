@@ -75,7 +75,7 @@ export default function DashboardLayout({
 
       <aside
         className={cn(
-          "fixed inset-y-0 left-0 z-50 lg:relative lg:block shrink-0 h-full overflow-hidden transition-all duration-300 ease-in-out border-r border-slate-800 bg-slate-900 shadow-2xl lg:shadow-none",
+          "fixed inset-y-0 left-0 z-50 lg:relative lg:block shrink-0 h-full overflow-hidden transition-all duration-300 ease-in-out border-r border-zinc-300 shadow-2xl lg:shadow-none",
           isOpen
             ? "translate-x-0 opacity-100"
             : "-translate-x-full lg:translate-x-0 opacity-0 lg:opacity-0"
