@@ -18,13 +18,13 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <CategorySection />
       <FlashSaleSection />
       <NewArrivals />
-      <WhyChooseUs />
-      <BrandSection />
-      <BestSellers />
       <MidBanner />
+      <BestSellers />
+      <CategorySection />
+      {/* <WhyChooseUs /> */}
+      {/* <BrandSection /> */}
       <FeaturedProducts />
       <BlogSection posts={posts} />
       <TrustFeatures />

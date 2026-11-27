@@ -18,7 +18,9 @@ interface ProductSliderProps {
 
 const ProductSlider = ({ products, title, subtitle }: ProductSliderProps) => {
   const sliderRef = useRef<Slider | null>(null);
-  const [flashSaleProducts, setFlashSaleProducts] = useState<ActiveFlashSaleProduct[]>([]);
+  const [flashSaleProducts, setFlashSaleProducts] = useState<
+    ActiveFlashSaleProduct[]
+  >([]);
 
   useEffect(() => {
     getActiveFlashSaleProducts().then(setFlashSaleProducts);
@@ -61,13 +63,8 @@ const ProductSlider = ({ products, title, subtitle }: ProductSliderProps) => {
   return (
     <section className="py-12 sm:py-16">
       <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
-        <div className="mb-8 sm:mb-10">
-          {subtitle && (
-            <p className="text-[11px] font-bold tracking-widest text-gray-400 uppercase mb-1">
-              {subtitle}
-            </p>
-          )}
-          <h2 className="text-xl md:text-2xl font-bold tracking-tight text-gray-900 uppercase">
+        <div className="mb-12 text-center">
+          <h2 className="text-[22px] font-semibold uppercase tracking-widest text-gray-900 md:text-2xl">
             {title}
           </h2>
         </div>
@@ -76,10 +73,12 @@ const ProductSlider = ({ products, title, subtitle }: ProductSliderProps) => {
           <div className="relative">
             <Slider {...settings} ref={sliderRef}>
               {products.map((product) => {
-                const productVariantIds = product.variants?.map((v) => v.id) || [];
-                const flashSale = flashSaleProducts.find((fp) =>
-                  productVariantIds.includes(fp.variantId)
-                ) || null;
+                const productVariantIds =
+                  product.variants?.map((v) => v.id) || [];
+                const flashSale =
+                  flashSaleProducts.find((fp) =>
+                    productVariantIds.includes(fp.variantId),
+                  ) || null;
                 return (
                   <div key={product.id} className="px-2">
                     <ProductCard
@@ -109,10 +108,12 @@ const ProductSlider = ({ products, title, subtitle }: ProductSliderProps) => {
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
             {products.map((product, index) => {
-              const productVariantIds = product.variants?.map((v) => v.id) || [];
-              const flashSale = flashSaleProducts.find((fp) =>
-                productVariantIds.includes(fp.variantId)
-              ) || null;
+              const productVariantIds =
+                product.variants?.map((v) => v.id) || [];
+              const flashSale =
+                flashSaleProducts.find((fp) =>
+                  productVariantIds.includes(fp.variantId),
+                ) || null;
               return (
                 <ProductCard
                   key={product.id}
