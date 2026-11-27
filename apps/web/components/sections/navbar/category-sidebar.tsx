@@ -35,7 +35,8 @@ const ROW_CLASS =
 /**
  * The hamburger panel: a floating card over a blurred backdrop.
  * Level 0 lists the live categories (then the page links); tapping a
- * category with subcategories slides to level 1 with just a Back row.
+ * category with subcategories slides to level 1, whose header is the
+ * back arrow + category name, sliding in with the pane like Dior.
  * The footer carries the account actions and the company contact
  * details from the company profile.
  */
@@ -90,26 +91,6 @@ export function CategorySidebar({
           >
             <X className="h-5 w-5" strokeWidth={1.5} />
             Close
-          </button>
-          <div className="h-px bg-gray-300/60" />
-        </div>
-
-        {/* Back row (drill-down level) */}
-        <div
-          className={cn(
-            "overflow-hidden px-6 transition-all duration-300",
-            selectedCategory
-              ? "max-h-16 opacity-100"
-              : "pointer-events-none max-h-0 opacity-0",
-          )}
-        >
-          <button
-            onClick={() => setSelectedCategory(null)}
-            className="flex items-center gap-1.5 py-3 text-sm font-medium text-gray-900"
-            tabIndex={selectedCategory ? 0 : -1}
-          >
-            <ChevronLeft className="h-4 w-4" />
-            Back
           </button>
           <div className="h-px bg-gray-300/60" />
         </div>
@@ -170,14 +151,24 @@ export function CategorySidebar({
               ))}
             </div>
 
-            {/* Level 1: subcategories of the selected category */}
+            {/* Level 1: subcategories of the selected category. Like
+                Dior, the pane header is the back arrow + category name
+                and slides in together with the pane. */}
             <div className="h-full w-full shrink-0 overflow-y-auto px-6 py-2">
               {selectedCategory && (
                 <>
+                  <button
+                    onClick={() => setSelectedCategory(null)}
+                    className="flex w-full items-center gap-1.5 py-[15px] text-left text-[15px] font-medium text-gray-900"
+                    aria-label={`Back to categories from ${selectedCategory.name}`}
+                  >
+                    <ChevronLeft className="h-4 w-4 shrink-0" />
+                    {selectedCategory.name}
+                  </button>
                   <Link
                     href={`/products?categoryId=${selectedCategory.id}`}
                     onClick={onClose}
-                    className="block py-[15px] text-[15px] font-medium text-gray-900"
+                    className="block py-[15px] text-[15px] text-gray-800 transition-colors hover:text-black"
                   >
                     All {selectedCategory.name}
                   </Link>
