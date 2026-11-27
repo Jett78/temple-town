@@ -67,41 +67,128 @@ interface NavItem {
 }
 
 const navigation: NavItem[] = [
-  { name: "Overview", href: "/dashboard", icon: LayoutDashboard, permission: "dashboard.view_stats" },
+  {
+    name: "Overview",
+    href: "/dashboard",
+    icon: LayoutDashboard,
+    permission: "dashboard.view_stats",
+  },
   // { name: "Domains", href: "/dashboard/domains", icon: Globe, permission: "domain.read" },
+  {
+    name: "Users",
+    href: "/dashboard/users",
+    icon: Users,
+    permission: "user.read",
+  },
   {
     name: "Content",
     icon: FileText,
-    permissions: ["blog.read", "testimonial.read", "team.read", "faq.read", "brand.read", "banner.read"],
+    permissions: [
+      "blog.read",
+      "testimonial.read",
+      "team.read",
+      "faq.read",
+      "brand.read",
+      "banner.read",
+    ],
     children: [
-      { name: "Blogs", href: "/dashboard/blogs", icon: FileText, permission: "blog.read" },
-      { name: "Testimonials", href: "/dashboard/testimonials", icon: Star, permission: "testimonial.read" },
-      { name: "Team", href: "/dashboard/team", icon: UsersRound, permission: "team.read" },
-      { name: "FAQs", href: "/dashboard/faqs", icon: HelpCircle, permission: "faq.read" },
-      { name: "Brands", href: "/dashboard/brands", icon: Star, permission: "brand.read" },
-      { name: "Banners", href: "/dashboard/banners", icon: Image, permission: "banner.read" },
+      {
+        name: "Blogs",
+        href: "/dashboard/blogs",
+        icon: FileText,
+        permission: "blog.read",
+      },
+      {
+        name: "Testimonials",
+        href: "/dashboard/testimonials",
+        icon: Star,
+        permission: "testimonial.read",
+      },
+      {
+        name: "Team",
+        href: "/dashboard/team",
+        icon: UsersRound,
+        permission: "team.read",
+      },
+      {
+        name: "FAQs",
+        href: "/dashboard/faqs",
+        icon: HelpCircle,
+        permission: "faq.read",
+      },
+      {
+        name: "Brands",
+        href: "/dashboard/brands",
+        icon: Star,
+        permission: "brand.read",
+      },
+      {
+        name: "Banners",
+        href: "/dashboard/banners",
+        icon: Image,
+        permission: "banner.read",
+      },
     ],
   },
-  { name: "Inquiries", href: "/dashboard/inquiries", icon: MessageSquare, permission: "inquiry.read" },
-  { name: "Navigation", href: "/dashboard/navigation", icon: Menu, permission: "navigation.read" },
-  { name: "Media", href: "/dashboard/media", icon: Image, permission: "__super_admin_only__" },
+
   {
     name: "Ecommerce",
     icon: Package,
-    permissions: ["category.read", "product.read", "review.moderate", "order.read", "discount.read", "flash_sale.read"],
+    permissions: [
+      "category.read",
+      "product.read",
+      "review.moderate",
+      "order.read",
+      "discount.read",
+      "flash_sale.read",
+    ],
     children: [
-      { name: "Categories", href: "/dashboard/categories", icon: Tags, permission: "category.read" },
-      { name: "Subcategories", href: "/dashboard/subcategories", icon: Tags, permission: "category.read" },
-      { name: "Products", href: "/dashboard/products", icon: Package, permission: "product.read" },
-      { name: "Flash Sales", href: "/dashboard/flash-sales", icon: Zap, permission: "flash_sale.read" },
-      { name: "Reviews", href: "/dashboard/reviews", icon: Star, permission: "review.moderate" },
-      { name: "Orders", href: "/dashboard/orders", icon: CreditCard, permission: "order.read" },
-      { name: "Coupons", href: "/dashboard/coupons", icon: Tag, permission: "discount.read" },
+      {
+        name: "Categories",
+        href: "/dashboard/categories",
+        icon: Tags,
+        permission: "category.read",
+      },
+      {
+        name: "Subcategories",
+        href: "/dashboard/subcategories",
+        icon: Tags,
+        permission: "category.read",
+      },
+      {
+        name: "Products",
+        href: "/dashboard/products",
+        icon: Package,
+        permission: "product.read",
+      },
+      {
+        name: "Flash Sales",
+        href: "/dashboard/flash-sales",
+        icon: Zap,
+        permission: "flash_sale.read",
+      },
+      {
+        name: "Reviews",
+        href: "/dashboard/reviews",
+        icon: Star,
+        permission: "review.moderate",
+      },
+      {
+        name: "Orders",
+        href: "/dashboard/orders",
+        icon: CreditCard,
+        permission: "order.read",
+      },
+      {
+        name: "Coupons",
+        href: "/dashboard/coupons",
+        icon: Tag,
+        permission: "discount.read",
+      },
     ],
   },
-  { name: "Users", href: "/dashboard/users", icon: Users, permission: "user.read" },
+
   { name: "Plugins", href: "/dashboard/plugins", icon: Plug },
-  { name: "Role Permissions", href: "/dashboard/role-permissions", icon: Shield },
   {
     name: "SEO",
     icon: Search,
@@ -128,16 +215,36 @@ const navigation: NavItem[] = [
     ],
   },
   {
+    name: "Media",
+    href: "/dashboard/media",
+    icon: Image,
+    permission: "__super_admin_only__",
+  },
+
+  {
     name: "Settings",
     icon: Building2,
     permissions: ["company_profile.read", "district_mapping.read"],
     children: [
+      {
+        name: "Navigation",
+        href: "/dashboard/navigation",
+        icon: Menu,
+        permission: "navigation.read",
+      },
       {
         name: "Company Profile",
         href: "/dashboard/company-profile",
         icon: Building2,
         permission: "company_profile.read",
       },
+
+      {
+        name: "Role Permissions",
+        href: "/dashboard/role-permissions",
+        icon: Shield,
+      },
+
       {
         name: "Delivery Charge",
         href: "/dashboard/district-mappings",
@@ -145,6 +252,12 @@ const navigation: NavItem[] = [
         permission: "district_mapping.read",
       },
     ],
+  },
+  {
+    name: "Inquiries",
+    href: "/dashboard/inquiries",
+    icon: MessageSquare,
+    permission: "inquiry.read",
   },
 ];
 
@@ -178,7 +291,7 @@ export function Sidebar() {
       if (permissions && permissions.includes(permission)) return true;
       return false;
     },
-    [permissions, role]
+    [permissions, role],
   );
 
   const hasAnyPermission = useCallback(
@@ -187,7 +300,7 @@ export function Sidebar() {
       if (permissions && permissions.includes("__all__")) return true;
       return permissionList.some((p) => permissions?.includes(p));
     },
-    [permissions, role]
+    [permissions, role],
   );
 
   const filteredNavigation = useMemo(() => {
@@ -202,7 +315,7 @@ export function Sidebar() {
 
         if (item.children) {
           const filteredChildren = item.children.filter((child) =>
-            child.permission ? hasPermission(child.permission) : true
+            child.permission ? hasPermission(child.permission) : true,
           );
 
           if (filteredChildren.length === 0) return null;
@@ -271,10 +384,10 @@ export function Sidebar() {
                     setOpenDropdown(isDropdownOpen ? null : item.name)
                   }
                   className={cn(
-                    "flex w-full items-center gap-3 p-3 text-sm font-medium rounded-lg transition-colors",
+                    "flex w-full items-center gap-3 p-3 text-xs font-medium rounded-lg transition-colors",
                     isChildActive
                       ? "bg-primarymain text-white"
-                      : "hover:bg-slate-800 hover:text-white"
+                      : "hover:bg-slate-800 hover:text-white",
                   )}
                 >
                   <item.icon
@@ -282,7 +395,7 @@ export function Sidebar() {
                       "size-5 shrink-0",
                       isChildActive
                         ? "text-white"
-                        : "text-slate-400 group-hover:text-white"
+                        : "text-slate-400 group-hover:text-white",
                     )}
                   />
                   <span className="truncate opacity-100 transition-opacity duration-300">
@@ -292,7 +405,7 @@ export function Sidebar() {
                     <ChevronDown
                       className={cn(
                         "size-4 shrink-0 transition-transform duration-200",
-                        isDropdownOpen && "rotate-180"
+                        isDropdownOpen && "rotate-180",
                       )}
                     />
                   </span>
@@ -307,10 +420,10 @@ export function Sidebar() {
                           key={child.name}
                           href={child.href}
                           className={cn(
-                            "flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg transition-colors",
+                            "flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-colors",
                             isChildItemActive
                               ? "bg-primarymain/20 text-white"
-                              : "text-slate-400 hover:bg-slate-800 hover:text-white"
+                              : "text-slate-400 hover:bg-slate-800 hover:text-white",
                           )}
                         >
                           <child.icon className="size-4 shrink-0" />
@@ -329,10 +442,10 @@ export function Sidebar() {
               key={item.name}
               href={item.href!}
               className={cn(
-                "flex items-center justify-between p-3 text-sm font-medium rounded-lg transition-colors group",
+                "flex items-center justify-between p-3 text-xs font-medium rounded-lg transition-colors group",
                 isActive
                   ? "bg-primarymain text-white"
-                  : "hover:bg-slate-800 hover:text-white"
+                  : "hover:bg-slate-800 hover:text-white",
               )}
             >
               <div className="flex items-center gap-3 overflow-hidden">
@@ -341,7 +454,7 @@ export function Sidebar() {
                     "size-5 shrink-0",
                     isActive
                       ? "text-white"
-                      : "text-slate-400 group-hover:text-white"
+                      : "text-slate-400 group-hover:text-white",
                   )}
                 />
                 <span className="truncate opacity-100 transition-opacity duration-300">
@@ -357,26 +470,30 @@ export function Sidebar() {
       <div className="p-4 border-t border-slate-800 space-y-2">
         <Link
           href="/"
-          className="flex items-center gap-3 px-3 py-2 w-full text-sm font-medium rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition-colors overflow-hidden"
+          className="flex items-center gap-3 px-3 py-2 w-full text-xs font-medium rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition-colors overflow-hidden"
         >
           <ExternalLink className="size-5 shrink-0" />
-          <span className="truncate opacity-100 transition-opacity duration-300">
+          <span className="truncate opacity-100  transition-opacity duration-300">
             View Site
           </span>
         </Link>
         <AlertDialog>
-          <AlertDialogTrigger render={<button className="flex items-center gap-3 px-3 py-2 w-full text-sm font-medium rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition-colors overflow-hidden" />}>
-              <LogOut className="size-5 shrink-0" />
-              <span className="truncate opacity-100 transition-opacity duration-300">
-                Logout
-              </span>
+          <AlertDialogTrigger
+            render={
+              <button className="flex items-center gap-3 px-3 py-2 w-full text-sm font-medium rounded-lg bg-red-500 text-white hover:bg-red-600  transition-colors overflow-hidden" />
+            }
+          >
+            <LogOut className="size-5 shrink-0" />
+            <span className="truncate opacity-100 transition-opacity duration-300">
+              Logout
+            </span>
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>
               <AlertDialogTitle>Logout Confirmation</AlertDialogTitle>
               <AlertDialogDescription>
-                Are you sure you want to logout? You will need to log in
-                again to access your account.
+                Are you sure you want to logout? You will need to log in again
+                to access your account.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>

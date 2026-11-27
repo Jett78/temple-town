@@ -118,7 +118,7 @@ export function CompanyProfileForm({ profile }: CompanyProfileFormProps) {
         {/* Left Column - Main Content */}
         <div className="space-y-6 lg:sticky lg:top-6 lg:self-start">
           {/* Company Information */}
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden  transition-shadow">
             <div className="px-6 py-4 border-b border-slate-100 bg-gradient-to-r from-slate-50/80 to-transparent">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-primarymain/10 rounded-xl">
@@ -217,7 +217,7 @@ export function CompanyProfileForm({ profile }: CompanyProfileFormProps) {
         <div className="space-y-6">
         
           {/* Social Media */}
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-2xl border border-slate-200  overflow-hidden  transition-shadow">
             <div className="px-6 py-4 border-b border-slate-100 bg-gradient-to-r from-slate-50/80 to-transparent">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-primarymain/10 rounded-xl">
@@ -295,7 +295,7 @@ export function CompanyProfileForm({ profile }: CompanyProfileFormProps) {
             </div>
           </div>
           {/* Logos & Favicon */}
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-2xl border border-slate-200  overflow-hidden  transition-shadow">
             <div className="px-6 py-4 border-b border-slate-100 bg-gradient-to-r from-slate-50/80 to-transparent">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-primarymain/10 rounded-xl">
@@ -340,7 +340,7 @@ export function CompanyProfileForm({ profile }: CompanyProfileFormProps) {
           </div>
 
           {/* Brand Colors */}
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-2xl border border-slate-200  overflow-hidden  transition-shadow">
             <div className="px-6 py-4 border-b border-slate-100 bg-gradient-to-r from-slate-50/80 to-transparent">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-primarymain/10 rounded-xl">
