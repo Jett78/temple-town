@@ -383,7 +383,7 @@ export function ProductForm({ product }: ProductFormProps) {
               Add variants for different options (size, color, etc.). If none added, a default variant is created automatically.
             </p>
           </div>
-          <Button type="button" variant="outline" size="sm" onClick={addVariant}>
+          <Button type="button" variant="default" size="sm" onClick={addVariant}>
             + Add Variant
           </Button>
         </div>
@@ -395,7 +395,7 @@ export function ProductForm({ product }: ProductFormProps) {
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
               <FormField
-                label="Price (paisa) *"
+                label="Price*"
                 name="defaultPrice"
                 type="number"
                 value={variants[0]?.price || ""}

@@ -112,7 +112,7 @@ export default function FileUploadMultiple({
           type="button"
           onClick={handleAddUrl}
           disabled={!urlInput.trim()}
-          className="h-10 px-4 rounded-md border border-slate-200 bg-white text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="h-10 px-4 rounded-md border border-slate-200 whitespace-nowrap bg-primarymain text-sm font-medium text-white hover:bg-primarymain/80 hover:border-slate-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Add URL
         </button>
