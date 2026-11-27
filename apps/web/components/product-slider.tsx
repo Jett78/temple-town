@@ -60,7 +60,7 @@ const ProductSlider = ({ products, title, subtitle }: ProductSliderProps) => {
 
   return (
     <section className="py-12 sm:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
         <div className="mb-8 sm:mb-10">
           {subtitle && (
             <p className="text-[11px] font-bold tracking-widest text-gray-400 uppercase mb-1">

@@ -117,7 +117,7 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12 my-20">
         <div className="flex gap-8">
           {/* Desktop: Sticky Filter Sidebar */}
           <div className="hidden md:block w-64 flex-shrink-0">

@@ -365,7 +365,7 @@ export function CheckoutView({ onClose }: { onClose?: () => void }) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12 pt-24 sm:pt-28 pb-16">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center justify-between">

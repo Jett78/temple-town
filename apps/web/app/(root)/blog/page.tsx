@@ -25,7 +25,7 @@ export default async function BlogPage() {
     <div className="min-h-screen bg-white">
       {/* Hero */}
       <section className="bg-gray-900 pt-20 pb-14 sm:pt-28 sm:pb-20">
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 bg-gray-800 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-gray-400">
               <BookOpen className="h-3 w-3" />

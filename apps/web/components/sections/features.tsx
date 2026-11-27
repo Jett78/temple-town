@@ -104,7 +104,7 @@ const features = [
 export function Features() {
   return (
     <section className="py-20 sm:py-28 bg-muted/20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
         <PageHeader
           title="Built with modern tools"
           subtitle="Tech Stack"

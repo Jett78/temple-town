@@ -12,7 +12,7 @@ const reasons = [
 export default function WhyChooseUs() {
   return (
     <section className="py-10 sm:py-16 bg-gray-50">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Left - Content */}
           <div>

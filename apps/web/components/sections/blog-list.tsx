@@ -8,7 +8,7 @@ import type { Blog } from "@/types/blog";
 export default function BlogList({ posts }: { posts: Blog[] }) {
   return (
     <section className="py-16 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
         {posts.length === 0 ? (
           <NoData title="blog posts" />
         ) : (

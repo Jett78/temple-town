@@ -189,13 +189,13 @@ export default function ProductCard({
   return (
     <Link href={`/products/${displaySlug}`} className="group relative block bg-white">
       {/* Image area — light gray, generous padding, like the reference */}
-      <div className="relative aspect-[6/5] overflow-hidden bg-[#f6f6f6]">
+      <div className="relative aspect-[4/5] overflow-hidden bg-[#f6f6f6]">
         {primaryImage?.url ? (
           <Image
             src={primaryImage.url}
             alt={displayName}
             fill
-            className="object-contain p-8 transition-transform duration-500 group-hover:scale-105 sm:p-10"
+            className="object-contain  transition-transform duration-500 group-hover:scale-105 "
           />
         ) : (
           <div className="flex h-full items-center justify-center text-4xl font-bold text-gray-200">

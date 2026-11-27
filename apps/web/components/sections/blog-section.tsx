@@ -10,7 +10,7 @@ export default function BlogSection({ posts }: { posts: BlogType[] }) {
 
   return (
     <section id="blog" className="py-10 sm:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
         <PageHeader
           title="Latest Insights"
           subtitle="Blogs"

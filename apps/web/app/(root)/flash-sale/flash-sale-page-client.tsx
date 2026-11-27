@@ -54,7 +54,7 @@ export default function FlashSalePageClient({ sale, products }: FlashSalePageCli
           </div>
         )}
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="relative mx-auto max-w-screen px-4 sm:px-6 lg:px-12 py-12 sm:py-16">
           <Link
             href="/"
             className="inline-flex items-center gap-1.5 text-white/70 text-sm font-medium hover:text-white transition-colors mb-8"
@@ -92,7 +92,7 @@ export default function FlashSalePageClient({ sale, products }: FlashSalePageCli
       </div>
 
       {/* Products Grid */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12 py-10 sm:py-12">
         <div className="flex items-center justify-between mb-6">
           <p className="text-sm text-gray-500">
             <span className="font-semibold text-gray-900">{products.length}</span> product{products.length !== 1 ? "s" : ""} on sale

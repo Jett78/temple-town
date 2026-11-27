@@ -69,7 +69,7 @@ export default function FlashSaleSectionClient({
         </div>
       )}
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div className="relative mx-auto max-w-screen px-4 sm:px-6 lg:px-12 py-10 sm:py-14">
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
           <div className="flex items-center gap-4">

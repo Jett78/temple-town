@@ -13,14 +13,12 @@ export default async function NewArrivals() {
 
   return (
     <section className="py-14 sm:py-20">
-      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
         {/* Centred title, like Atelio's "NEW DROP" */}
         <div className="mb-12 text-center">
-          <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">
-            Just In
-          </p>
-          <h2 className="text-[22px] font-semibold uppercase tracking-[0.25em] text-gray-900 md:text-2xl">
-            New Arrivals
+       
+          <h2 className="text-[22px] font-semibold uppercase tracking-widest text-gray-900 md:text-2xl">
+            New Drop
           </h2>
         </div>
 

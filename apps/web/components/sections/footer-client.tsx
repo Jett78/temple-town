@@ -69,7 +69,7 @@ export function FooterClient({
 
   return (
     <footer className="border-t border-gray-200 bg-white text-gray-900">
-      <div className="mx-auto max-w-[1400px] px-4 pb-10 pt-16 sm:px-6 lg:px-10">
+      <div className=" pb-10 pt-16 mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
         {/* Link columns */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Shop — live categories */}

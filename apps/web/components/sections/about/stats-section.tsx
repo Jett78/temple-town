@@ -13,7 +13,7 @@ export default function StatsSection() {
   return (
     <section className="relative overflow-hidden bg-slate-950 py-20">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(120,119,198,0.15),transparent)]" />
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12 relative">
         <div className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-4">
           {stats.map((stat, i) => (
             <motion.div

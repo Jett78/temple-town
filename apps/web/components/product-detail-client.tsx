@@ -34,7 +34,7 @@ export default function ProductDetailClient({ product, relatedProducts = [], fla
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16 ">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12 my-16 ">
         <Link
           href="/products"
           className="inline-flex items-center gap-1.5 mb-8 text-[13px] font-medium text-gray-500 hover:text-gray-900 transition-colors"

@@ -33,7 +33,7 @@ const reasons = [
 export default function WhyChooseSection() {
   return (
     <section className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
         <div className="grid gap-16 lg:grid-cols-5 lg:items-start">
           <motion.div
             initial={{ opacity: 0, x: -20 }}

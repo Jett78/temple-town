@@ -14,7 +14,7 @@ export async function Testimonials() {
 
   return (
     <section className="bg-gray-50 py-10 sm:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen px-4 sm:px-6 lg:px-12">
         <PageHeader
           title="What our clients say"
           subtitle="Testimonials"
